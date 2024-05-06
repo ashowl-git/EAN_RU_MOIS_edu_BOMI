@@ -93,7 +93,8 @@ df_legal_B = pd.read_csv('legal_info_b.csv')
 
 
 st.caption('--------', unsafe_allow_html=False)
-st.markdown('■ 1 구, 군 단위일때, 시는 입력 하지 않음 ex)강남구 대치동 , 양평군 옥천면')
+st.subheader('■ 주소검색')
+st.markdown('1. 구, 군 단위일때, 시는 입력 하지 않음 ex)강남구 대치동 , 양평군 옥천면')
 sigungu_input = st.text_input("시군구", "강남구")
 bdong_input = st.text_input("법정동", "대치동")
 
@@ -103,9 +104,10 @@ df_legal_B_input = df_legal_B[cond1&cond2]
 st.dataframe(df_legal_B_input)
 
 st.caption('--------', unsafe_allow_html=False)
-st.subheader('■ 2 건축물 대장정보 서비스 선택')
-st.subheader('■ 3 위 표에서 검색된 리스트에서 원하는 주소의 법정동기순구코드, 법정동읍면코드를 아래 입력')
-st.subheader('■ 4 위 표에서 검색된 리스트에서 원하는 주소의 법정동기순구코드, 법정동읍면코드를 아래 입력')
+st.subheader('■ 건축물대장정보검색')
+st.markdown('2 건축물 대장정보 서비스 드롭다운 선택')
+st.markdown('3 위 표에서 검색된 리스트에서 원하는 주소의 법정동기순구코드, 법정동읍면코드를 아래 입력')
+st.markdown('4 번, 지 입력 생략 후 동 전체 건물정보 크롤링 시 시간이 오래걸릴 수 있음')
 # Collecting user input
 ledger_type = st.selectbox("건축물 대장정보 서비스 선택", ("기본개요", "총괄표제부", "표제부", "층별개요", "부속지번", "전유공용면적", "오수정화시설", "주택가격", "전유부", "지역지구구역", "소유자"), index=0, key='ledger_type')
 sigungu_code = st.text_input("법정동시군구 코드", "11680")
