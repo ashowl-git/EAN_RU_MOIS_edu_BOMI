@@ -14,4 +14,4 @@ chart_studio
 cufflinks
 xlsxwriter
 pyparsing
-PublicDataReader --upgrade
+PublicDataReader
