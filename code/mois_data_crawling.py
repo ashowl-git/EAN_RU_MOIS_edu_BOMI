@@ -62,10 +62,21 @@ import streamlit as st
 
 # Assuming 'api' is your API handler object
 
+df_legal_B = pd.read_csv('../data/legal_info_b.csv')
+
+sigungu_input = st.text_input("시군구", "강남구")
+bdong_input = st.text_input("법정동", "대치동")
+
+cond1 = df_legal_B['시군구명'] == sigungu_input
+cond2 = df_legal_B['읍면동명'] == bdong_input
+df_legal_B_input = df_legal_B[cond1&cond2]
+st.dataframe(df_legal_B_input)
+
+
 # Collecting user input
 ledger_type = st.selectbox("대장정보 서비스 선택", ("기본개요", "총괄표제부", "표제부", "층별개요", "부속지번", "전유공용면적", "오수정화시설", "주택가격", "전유부", "지역지구구역", "소유자"), index=0, key='ledger_type')
-sigungu_code = st.text_input("시군구 코드", "11680")
-bdong_code = st.text_input("법정동 코드", "10600")
+sigungu_code = st.text_input("법정동시군구 코드", "11680")
+bdong_code = st.text_input("법정동읍면동 코드", "10600")
 bun = st.text_input("번", "930")
 ji = st.text_input("지", "4")
 
