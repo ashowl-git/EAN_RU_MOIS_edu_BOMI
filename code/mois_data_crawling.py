@@ -64,10 +64,10 @@ import streamlit as st
 
 # Collecting user input
 ledger_type = st.selectbox("대장정보 서비스 선택", ("기본개요", "총괄표제부", "표제부", "층별개요", "부속지번", "전유공용면적", "오수정화시설", "주택가격", "전유부", "지역지구구역", "소유자"), index=0, key='ledger_type')
-sigungu_code = st.text_input("시군구 코드", "41135")
-bdong_code = st.text_input("법정동 코드", "11000")
-bun = st.text_input("번", "542")
-ji = st.text_input("지", "")
+sigungu_code = st.text_input("시군구 코드", "11680")
+bdong_code = st.text_input("법정동 코드", "10600")
+bun = st.text_input("번", "930")
+ji = st.text_input("지", "4")
 
 # Call API with user inputs
 df = api.get_data(
