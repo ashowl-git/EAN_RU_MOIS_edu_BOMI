@@ -44,6 +44,33 @@ from sklearn.metrics import mean_absolute_percentage_error
 from sklearn.metrics import mean_squared_log_error
 from PublicDataReader import BuildingLedger
 
+
+# # hide the hamburger menu? hidden or visible
+hide_menu_style = """
+        <style>
+        #MainMenu {visibility: visible;}
+        footer {visibility: visible;}
+        footer:after {content:'Copyright 2024. EAN_RU_BOMI. All rights reserved.';
+        display:block;
+        opsition:relatiive;
+        color:orange; #tomato 
+        padding:5px;
+        top:100px;}
+
+        </style>
+        """
+
+st.set_page_config(layout="wide", page_title="EAN_RU_BOMI")
+st.markdown(hide_menu_style, unsafe_allow_html=True) # hide the hamburger menu?
+
+
+
+
+
+
+
+
+
 # 만료예정일 2024-10-12 만료 이후 재신청필요
 # https://www.data.go.kr/iim/api/selectAcountList.do
 # b7U179viBFuoc0q%2BDcekgsaFJsbHBZnIrgbl2ORvXCAB0Id0Sq954E%2Fju4FHtlWHU1AM9f9859c28%2FYGKKNPjQ%3D%3D
