@@ -89,7 +89,7 @@ import streamlit as st
 
 # Assuming 'api' is your API handler object
 
-df_legal_B = pd.read_csv('/data/legal_info_b.csv')
+df_legal_B = pd.read_csv('legal_info_b.csv')
 
 sigungu_input = st.text_input("시군구", "강남구")
 bdong_input = st.text_input("법정동", "대치동")
