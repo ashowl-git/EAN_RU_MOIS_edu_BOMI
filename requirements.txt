@@ -1,0 +1,16 @@
+altair
+pandas
+numpy
+requests
+lxml
+seaborn
+scikit-learn
+scipy
+streamlit
+openpyxl
+plotly
+matplotlib
+chart_studio
+cufflinks
+xlsxwriter
+pyparsing
