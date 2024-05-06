@@ -60,7 +60,7 @@ hide_menu_style = """
         </style>
         """
 
-st.set_page_config(layout="wide", page_title="EAN_RU_BOMI_mois_건축물대장정보검색")
+st.set_page_config(layout="wide", page_title="EAN_RU_BOMI_mois")
 st.markdown(hide_menu_style, unsafe_allow_html=True) # hide the hamburger menu?
 
 
