@@ -96,7 +96,7 @@ st.caption('--------', unsafe_allow_html=False)
 st.subheader('■ 주소검색')
 st.markdown('1. 구, 군 단위일때, 시는 입력 하지 않음 ex)강남구 대치동 , 양평군 옥천면')
 sigungu_input = st.text_input("시군구", "강남구")
-bdong_input = st.text_input("법정동", "대치동")
+bdong_input = st.text_input("법정동", "삼성동")
 
 cond1 = df_legal_B['시군구명'] == sigungu_input
 cond2 = df_legal_B['읍면동명'] == bdong_input
@@ -111,9 +111,9 @@ st.markdown('4. 번, 지 입력 생략 후 동 전체 건물정보 크롤링 시
 # Collecting user input
 ledger_type = st.selectbox("건축물 대장정보 서비스 선택", ("기본개요", "총괄표제부", "표제부", "층별개요", "부속지번", "전유공용면적", "오수정화시설", "주택가격", "전유부", "지역지구구역", "소유자"), index=0, key='ledger_type')
 sigungu_code = st.text_input("법정동시군구 코드", "11680")
-bdong_code = st.text_input("법정동읍면동 코드", "10600")
-bun = st.text_input("번", "930")
-ji = st.text_input("지", "4")
+bdong_code = st.text_input("법정동읍면동 코드", "10500")
+bun = st.text_input("번", "143")
+ji = st.text_input("지", "20")
 
 # Call API with user inputs
 df = api.get_data(
