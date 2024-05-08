@@ -94,7 +94,8 @@ df_legal_B = pd.read_csv('legal_info_b.csv')
 
 st.caption('--------', unsafe_allow_html=False)
 st.subheader('■ 주소검색')
-st.markdown('1. 구, 군 단위일때, 시는 입력 하지 않음 ex)강남구 대치동 , 양평군 옥천면')
+st.markdown('1. 구, 군 단위일때, 시는 입력 하지 않음 ex)강남구/대치동 , 양평군/옥천면')
+st.markdown('1-1. 특별시, 광역시, 자치시가 아닌 시에서 구 단위 구분 되어있다면 시 입력 ex)수원시 장안구/파장동 , 부천시 원미구/춘의동')
 sigungu_input = st.text_input("시군구", "강남구")
 bdong_input = st.text_input("법정동", "삼성동")
 
