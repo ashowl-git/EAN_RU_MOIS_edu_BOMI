@@ -91,6 +91,9 @@ import streamlit as st
 
 df_legal_B = pd.read_csv('legal_info_b.csv')
 
+st.caption('--------', unsafe_allow_html=False)
+st.subheader('■ 건축물 대장 "표제부"의 정보만 필요할 경우 아래 웹사이트에서 편하게 검색 가능')
+st.markdown('https://www.hub.go.kr/portal/gis/bld/idx-bld-polygon-list.do')
 
 st.caption('--------', unsafe_allow_html=False)
 st.subheader('■ 주소검색')
